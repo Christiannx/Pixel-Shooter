@@ -2,8 +2,8 @@
 Pixallated 3D Top-down endless shotter
 
 ## Player
-- Shoots make 1 damage\
-- has x health\
+- Shoots make 1 damage
+- has x health
 - skin, weapon, skills can be upgraded(health, damage)
 ## Enemies
 - **Wolf**\
