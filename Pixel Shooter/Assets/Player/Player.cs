@@ -2,6 +2,11 @@
 
 public class Player : MonoBehaviour {
     public float moveSpeed;
+    [Header("Shooting")]
+    public Bullet bullet;
+    public Transform shootPoint;
+    public float bulletForce;
+
 
     new Rigidbody rigidbody;
     Vector3 movement;
@@ -24,6 +29,13 @@ public class Player : MonoBehaviour {
                 z = hit.point.z
             };
             transform.LookAt(lookAt);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Mouse0)) {
+            var bulletInstance = Instantiate(bullet, shootPoint.position, Quaternion.identity);
+            var bulletRB = bulletInstance.GetComponent<Rigidbody>();
+            bulletRB.AddForce(shootPoint.forward * bulletForce, ForceMode.Impulse);
+            Destroy(bulletInstance.gameObject, 5);
         }
     }
 }
