@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 
 public class Player : MonoBehaviour {
+    public int health = 20;
+    public int damage = 1;
     public float moveSpeed;
     [Header("Shooting")]
     public Bullet bullet;
@@ -33,6 +35,7 @@ public class Player : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.Mouse0)) {
             var bulletInstance = Instantiate(bullet, shootPoint.position, Quaternion.identity);
+            bulletInstance.damage = damage;
             var bulletRB = bulletInstance.GetComponent<Rigidbody>();
             bulletRB.AddForce(shootPoint.forward * bulletForce, ForceMode.Impulse);
             Destroy(bulletInstance.gameObject, 5);

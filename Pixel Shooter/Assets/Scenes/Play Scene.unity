@@ -603,7 +603,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1600217407
 GameObject:
@@ -614,11 +614,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1600217411}
+  - component: {fileID: 1600217412}
+  - component: {fileID: 1600217413}
   - component: {fileID: 1600217410}
   - component: {fileID: 1600217409}
   - component: {fileID: 1600217408}
-  - component: {fileID: 1600217412}
-  - component: {fileID: 1600217413}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -699,7 +699,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1600217412
 MonoBehaviour:
@@ -715,6 +715,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 3
   moveSpeed: 4
+  attackDamage: 1
+  attackRange: 4
+  attackSpeed: 1
 --- !u!54 &1600217413
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -724,7 +727,7 @@ Rigidbody:
   m_GameObject: {fileID: 1600217407}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
+  m_Drag: 2.5
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
@@ -822,7 +825,7 @@ Transform:
   m_LocalScale: {x: 15, y: 1, z: 20}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2077289435
 GameObject:
@@ -833,11 +836,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2077289439}
+  - component: {fileID: 2077289440}
+  - component: {fileID: 2077289441}
   - component: {fileID: 2077289438}
   - component: {fileID: 2077289437}
   - component: {fileID: 2077289436}
-  - component: {fileID: 2077289441}
-  - component: {fileID: 2077289440}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -934,6 +937,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09280e314141e684c8c3bfae80b3f27d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 20
   moveSpeed: 8
   bullet: {fileID: 4254469373126424866, guid: c5a03297b68e5ec4c8fa8c8fa876de4c, type: 3}
   shootPoint: {fileID: 902823938}
